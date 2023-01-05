@@ -1,18 +1,19 @@
 #include <iostream>
 using namespace std;
 
+long long f(int n){
+  //prevent 0
+  if(n<=2){
+    return 1;
+  }
+  //arrangement methods
+  return (n-1)*(f(n-1)+f(n-2));
+}
+
 int main() {
   int n;
-  long long newn = 0;
+  //input
   cin>>n;
-  for(int i = 0; i<n-1; i++){
-    if(n-1*n-1+n-2==n){
-      newn++;
-      n--;
-      continue;
-    }
-    newn++;
-    n--;
-  }
-  cout<<newn;
+  //output
+  cout<<f(n);
 }
