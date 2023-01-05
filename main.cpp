@@ -2,7 +2,7 @@
 using namespace std;
 
 long long f(int n){
-  //prevent 0
+  //only 0
   if(n==1){
     return 0;
   }
